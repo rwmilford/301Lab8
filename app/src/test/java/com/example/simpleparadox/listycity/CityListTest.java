@@ -32,7 +32,9 @@ class CityListTest {
     @Test
     void testDelete() {
         CityList cityList = mockCityList();
+        City city = new City("Edmonton", "Alberta");
 
-        assertEquals(0, mockCityList().countCities());
+        cityList.delete(city);
+        assertEquals(0, cityList.countCities());
     }
 }
